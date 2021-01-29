@@ -14,14 +14,15 @@ for (let like of likes) {
       if(heart.innerText === EMPTY_HEART)
         {heart.innerText = FULL_HEART
          heart.classList.add("activated-heart");}
-    }
-  )
-  }
-
-
-
-
-
+      else {
+        heart.innerText === EMPTY_HEART;
+        heart.classList.remove("activated-heart");
+      }
+    })
+    .catch((error)=>{
+      document.getElementById("modal").className = "";
+  });
+}
 //------------------------------------------------------------------------------
 // Ignore after this point. Used only for demo purposes
 //------------------------------------------------------------------------------
